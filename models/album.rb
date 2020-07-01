@@ -23,7 +23,7 @@ class Album
 
     def Album.delete_all()
         sql = "DELETE FROM albums"
-        result = SQLRunner.run(sql)
+        result = SqlRunner.run(sql)
     end
 
     def delete()

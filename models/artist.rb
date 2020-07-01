@@ -21,7 +21,7 @@ class Artist
 
     def Artist.delete_all()
         sql = "DELETE FROM artists"
-        result = SQLRunner.run(sql)
+        result = SqlRunner.run(sql)
     end
 
     def delete()
