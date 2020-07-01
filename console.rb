@@ -23,41 +23,45 @@ artist3.save()
 
 album1 = Album.new({
     'title' => 'El Camino',
-    'genre' => 'rock',
+    'genre' => 'Rock',
     'artist_id' => artist1.id
 })
 album1.save()
 
 album2 = Album.new({
     'title' => 'Brothers',
-    'genre' => 'rock',
+    'genre' => 'Rock',
     'artist_id' => artist1.id
 })
 album2.save()
 
 album3 = Album.new({
     'title' => 'The Queen Is Dead',
-    'genre' => 'alternative',
+    'genre' => 'Indie',
     'artist_id' => artist2.id
 })
 album3.save()
 
 album4 = Album.new({
     'title' => 'Meat Is Murder',
-    'genre' => 'rock',
+    'genre' => 'Indie',
     'artist_id' => artist2.id
 })
 album4.save()
 
 album5 = Album.new({
     'title' => 'Hatful Of Hollow',
-    'genre' => 'rock',
+    'genre' => 'Indie',
     'artist_id' => artist2.id
 })
 album5.save()
 
 album5.delete()
 
+album3.genre = 'Alternative rock'
+album3.update()
+album4.genre = 'Alternative rock'
+album4.update()
 
 binding.pry
 nil
