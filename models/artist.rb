@@ -1,8 +1,9 @@
 require_relative('../db/sql_runner')
+require_relative('album.rb')
 
 class Artist
 
-    attr_reader :id, :name
+    attr_accessor :id, :name
 
     def initialize(options)
         @id = options['id'] if options['id']
@@ -43,6 +44,16 @@ class Artist
         WHERE id = $2"
         values = [@name]
         SqlRunner.run(sql, values)
+    end
+
+    def self.find_by_id(id)
+        sql = "SELECT * FROM artists WHERE id = $1"
+        values = [id]
+        results_array = SqlRunner.run(sql, values)
+        return nil if results_array.first() == nil
+        artist_hash = results_array[0]
+        found_artist = Artist.new(artist_hash)
+        return found_artist
     end
 
 end

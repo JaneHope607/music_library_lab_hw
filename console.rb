@@ -63,5 +63,14 @@ album3.update()
 album4.genre = 'Alternative rock'
 album4.update()
 
+all_the_albums = Album.all()
+all_the_artists = Artist.all()
+
+search_album = Album.find_by_id(album2.id)
+search_artist = Artist.find_by_id(artist3.id)
+
+# search_album_not_found = Album.find_by_id(album8.id)
+# search_artist_not_found = Artist.find_by_id(artist5.id)
+
 binding.pry
 nil
