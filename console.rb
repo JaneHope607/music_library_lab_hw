@@ -69,6 +69,8 @@ all_the_artists = Artist.all()
 search_album = Album.find_by_id(album2.id)
 search_artist = Artist.find_by_id(artist3.id)
 
+artist2.list_all_albums_by_artist()
+
 # search_album_not_found = Album.find_by_id(album8.id)
 # search_artist_not_found = Artist.find_by_id(artist5.id)
 

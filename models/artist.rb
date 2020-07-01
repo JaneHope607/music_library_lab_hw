@@ -56,4 +56,13 @@ class Artist
         return found_artist
     end
 
+    def list_all_albums_by_artist()
+        sql = "SELECT * FROM albums
+        WHERE artist_id = $1"
+        values = [@id]
+        result = SqlRunner.run(sql, values)
+        all_albums = result.map { |album| Album.new(album) }
+        return all_albums
+    end
+
 end
