@@ -12,6 +12,7 @@ album1 = Album.new({
     'genre' => 'rock',
     'artist_id' => artist1.id
 })
+album1.save()
 
 binding.pry
 nil
